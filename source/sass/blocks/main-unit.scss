@@ -1,0 +1,142 @@
+.main-unit {
+  width: 100%;
+  background-image: url("../img/main-background@2x.jpg");
+  background-image: image-set(
+    url("../img/main-background.webp") 1x,
+    url("../img/main-background@2x.webp") 2x,
+    url("../img/main-background.jpg") 1x,
+    url("../img/main-background@2x.jpg") 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgb(87, 49, 3);
+
+  @include vp-1023 {
+    position: relative;
+    background: none;
+  }
+
+  &::before {
+    @include vp-1023 {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: -15px;
+      background-image: url("../img/main-background@2x.jpg");
+      background-image: image-set(
+        url("../img/main-background.webp") 1x,
+        url("../img/main-background@2x.webp") 2x,
+        url("../img/main-background.jpg") 1x,
+        url("../img/main-background@2x.jpg") 2x
+      );
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: rgb(87, 49, 3);
+    }
+  }
+}
+
+.main-unit__container {
+  padding-top: 19.06rem;
+  padding-bottom: 17.63rem;
+
+  @include vp-1023 {
+    padding-top: 5em;
+    padding-bottom: 12.69em;
+  }
+
+  @include vp-769 {
+    padding-bottom: 11.88em;
+  }
+}
+
+.main-unit__container h2 {
+  @include Roboto-Condensed-bold;
+  font-size: 5em;
+  line-height: 1.18em;
+  letter-spacing: 0.07em;
+  color: $color-font;
+  text-transform: uppercase;
+
+  margin: 0 0 1.88rem 1.58em;
+
+  @include vp-1023 {
+    font-size: 4em;
+    line-height: 1.17em;
+
+    margin: 0 0;
+  }
+
+  @include vp-769 {
+    font-size: 2.25em;
+    line-height: 1.17em;
+    margin-bottom: 0.23em;
+  }
+}
+
+.main-unit__container p {
+  width: 42.81rem;
+  font-size: 1.38em;
+  line-height: 155%;
+  color: $color-font;
+
+  margin: 0 0 3.13rem 5.68em;
+
+  @include vp-1023 {
+    width: 41.88rem;
+    margin: 0 0 2.59em;
+  }
+
+  @include vp-769 {
+    width: 100%;
+    font-size: 0.88em;
+    margin: 0 0 3.2em;
+  }
+}
+
+.main-unit__button {
+  display: inline-flex;
+
+  @include Roboto-Condensed-bold;
+  font-size: 1.13em;
+  line-height: 1.17em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-font;
+
+  border: none;
+  background-color: $color-link-active;
+
+  padding: 0.83em 1.75rem;
+  margin-left: 6.92em;
+
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: $color-link-active;
+    background-color: $color-font;
+  }
+
+  @include vp-1023 {
+    margin-left: 2.8rem;
+    padding-bottom: 1.11em;
+  }
+
+  @include vp-769 {
+    font-size: 0.88em;
+    line-height: 1.14em;
+    padding: 0.81em 2.4rem 0.82em 2.31rem;
+    margin-left: 0;
+  }
+}

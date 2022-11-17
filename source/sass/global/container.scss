@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  max-width: 2600px;
+  margin: 0 auto;
+  padding-left: 21.88rem;
+  padding-right: 21.88rem;
+
+  @include vp-1859 {
+    padding-left: 18.75rem;
+    padding-right: 18.75rem;
+  }
+
+  @include vp-1699 {
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+  }
+
+  @include vp-1439 {
+    padding-left: 7.81rem;
+    padding-right: 7.81rem;
+  }
+
+  @include vp-1279 {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  @include vp-1023 {
+    padding-left: 3.13rem;
+    padding-right: 3.13rem;
+  }
+
+  @include vp-769 {
+    padding-left: 1.56rem;
+    padding-right: 1.56rem;
+  }
+}

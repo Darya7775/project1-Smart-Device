@@ -1,0 +1,140 @@
+.header {
+  width: 100%;
+  min-height: 120px;
+
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+
+  @include vp-1023 {
+    min-height: 100px;
+    position: static;
+  }
+
+  @include vp-769 {
+    min-height: 70px;
+  }
+
+  @media vp-319 {
+    min-height: 70px;
+  }
+}
+
+.header__logo {
+  max-width: 100%;
+  display: block;
+  margin-right: 9.69rem;
+
+  @include vp-1859 {
+    margin-right: 7.69rem;
+  }
+
+  @include vp-1699 {
+    margin-right: 6rem;
+  }
+
+  @include vp-1439 {
+    margin-right: 4rem;
+  }
+
+  @include vp-1279 {
+    margin-right: 3rem;
+  }
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+
+  @include vp-769 {
+    width: 35px;
+    height: 70px;
+    padding-top: 15px;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+
+  @include vp-1859 {
+    justify-content: space-between;
+  }
+}
+
+.header__list {
+  width: 30rem;
+  margin: 0 9.38em 0.63rem 0;
+  padding: 0;
+
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.63rem;
+
+  @include vp-1859 {
+    margin-right: 7.38em;
+  }
+
+  @include vp-1699 {
+    margin-right: 5.5rem;
+  }
+
+  @include vp-1439 {
+    margin-right: 6rem;
+  }
+
+  @include vp-1279 {
+    width: 24rem;
+    margin-right: 1rem;
+  }
+
+  @include vp-1023 {
+    max-width: 100%;
+    gap: 1.25rem;
+    row-gap: 0.63rem;
+    justify-content: flex-end;
+  }
+
+  @include vp-769 {
+    margin-right: 0.63rem;
+  }
+}
+
+.header__link svg {
+  fill: $color-link-active;
+}
+
+.header__link:active svg {
+  fill: #070261;
+}
+
+.header__link {
+  font-size: 1em;
+  line-height: 1.13em;
+  color: $color-font;
+
+  padding: 1em 0.31rem;
+  display: flex;
+  align-items: center;
+  gap: 0.94rem;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: $color-link-active;
+  }
+
+  @include vp-1023 {
+    padding: 0.63em 0.63rem;
+  }
+}
+
+.header__text {
+  @include vp-1023 {
+    display: none;
+  }
+}

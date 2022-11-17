@@ -1,0 +1,34 @@
+.social {
+  width: 9.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+}
+
+.social__link {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__link svg {
+  fill: #f8fdff;
+}
+
+.social__link:hover svg {
+  fill: #929799;
+}
+
+.social__link:active svg {
+  fill: $color-link-active;
+}

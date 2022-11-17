@@ -1,0 +1,143 @@
+.service {
+  width: 100%;
+  background-color: $background-color-dark;
+}
+
+.service__container {
+  padding-top: 4.06rem;
+  padding-bottom: 8.75rem;
+
+  @include vp-1023 {
+    padding-top: 3.56rem;
+    padding-bottom: 4.56rem;
+  }
+
+  @include vp-769 {
+    padding-top: 3.13rem;
+    padding-bottom: 5.38rem;
+  }
+}
+
+.service__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5.31rem;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 1.88rem;
+  }
+}
+
+.service__title {
+  @include title;
+  color: $color-font;
+
+  margin: 0;
+  margin-bottom: 1.47em;
+
+  @include vp-1023 {
+    margin-bottom: 1.06em;
+  }
+
+  @include vp-769 {
+    width: 16.25rem;
+    margin-bottom: 1em;
+    font-size: 1.75em;
+    line-height: 140.62%;
+  }
+}
+
+.service__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 40.63rem;
+
+  @include Roboto-Condensed-regular;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  color: #ffffff;
+
+  padding: 2.4em 2.5rem 2.5em;
+
+  @include hover-focus {
+    opacity: 0.7;
+    box-shadow: 0 0 10px 7px #ffffff;
+  }
+
+  @include vp-1023 {
+    height: 15.63rem;
+    padding: 1.75em 2.81rem 2em;
+  }
+
+  @include vp-769 {
+    font-size: 1.13em;
+    padding: 1.39em 1.81rem;
+  }
+}
+
+.service__icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 3px 0 0 0;
+  background-color: $color-link-active;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 44%;
+    width: 0.31rem;
+    height: 0.06rem;
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    top: 47%;
+    transform: rotate(45deg);
+
+    @include vp-769 {
+      top: 40%;
+    }
+  }
+
+  &::before {
+    top: 52%;
+    transform: rotate(-45deg);
+  }
+
+  @include vp-769 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.service__item {
+  background-color: #0b0841;
+
+  position: relative;
+}
+
+.service__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  object-fit: cover;
+
+  @include vp-1023 {
+    height: 15.63rem;
+  }
+}

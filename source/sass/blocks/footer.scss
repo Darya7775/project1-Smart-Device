@@ -1,0 +1,291 @@
+.footer {
+  width: 100%;
+  background-color: $background-color-dark;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-self: start;
+  gap: 8.13rem;
+
+  @include vp-1699 {
+    column-gap: 3.5rem;
+    justify-content: center;
+  }
+
+  @include vp-1439 {
+    column-gap: 2.5rem;
+  }
+
+  @include vp-1279 {
+    column-gap: 1.5rem;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    column-gap: 1.88rem;
+    margin-bottom: 4rem;
+  }
+
+  @include vp-769 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.19rem;
+  }
+}
+
+.footer__social {
+  margin-left: 0.6rem;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  @include vp-1023 {
+    row-gap: 0.3rem;
+  }
+
+  @include vp-769 {
+    row-gap: 0.69rem;
+  }
+}
+
+.footer__list ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.footer__wrapper {
+  display: grid;
+  padding: 3.13rem 0 3.44rem;
+  position: relative;
+
+  &:first-child {
+    display: block;
+    margin-right: 1.9rem;
+
+    @include vp-1699 {
+      margin-right: 4.38rem;
+    }
+
+    @include vp-1439 {
+      margin-right: 2.19rem;
+    }
+
+    @include vp-1279 {
+      margin-right: 0;
+    }
+
+    @include vp-1023 {
+      grid-area: 1/1/2/-1;
+      margin: 3.13rem 0 1.88rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include vp-769 {
+      flex-direction: column;
+      align-items: center;
+      padding: 2.19rem 0 1.25rem;
+      margin: 0;
+    }
+  }
+
+  &:last-child {
+    align-self: start;
+
+    @include vp-769 {
+      align-self: stretch;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 0;
+  }
+
+  @include vp-769 {
+    position: relative;
+    padding: 1.38rem 0;
+
+    &::after {
+      content: "";
+      width: calc(100% + 3.13rem);
+      height: 1px;
+      background-color: rgba(248, 253, 255, 0.7);
+
+      position: absolute;
+      bottom: 0;
+      left: -1.56rem;
+    }
+
+    &[data-state="active"] {
+      .footer__button::after {
+        transform: rotate(0deg);
+      }
+
+      .footer__title {
+        margin-bottom: 1.06rem;
+      }
+    }
+  }
+}
+
+.footer__wrapper--grid {
+  grid-template-columns: 1fr min-content;
+  column-gap: 3rem;
+
+  @include vp-1439 {
+    column-gap: 1.5rem;
+  }
+
+  @include vp-1279 {
+    column-gap: 1rem;
+  }
+
+  @include vp-1023 {
+    row-gap: 0.5rem;
+    grid-template-columns: max-content;
+  }
+}
+
+.footer__wrapper--grid .footer__title {
+  @include vp-1023 {
+    margin-bottom: 0.8em;
+  }
+
+  @include vp-769 {
+    margin: 0;
+  }
+}
+
+.footer__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.47em;
+
+  @include Roboto-Condensed-regular;
+  font-size: 0.94em;
+  line-height: 1.07em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  margin-bottom: 1.33em;
+
+  @include vp-1023 {
+    margin-bottom: 1.53em;
+  }
+
+  @include vp-769 {
+    margin: 0;
+  }
+}
+
+.footer__logo {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-769 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.footer__link {
+  display: inline-flex;
+
+  font-size: 1em;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: $color-link-active;
+  }
+
+  @include vp-769 {
+    font-size: 0.88em;
+  }
+}
+
+.footer__address {
+  font-style: normal;
+  font-size: 1em;
+  line-height: 135%;
+  color: rgba(255, 255, 255, 0.7);
+
+  @include vp-769 {
+    font-size: 0.88em;
+    margin-bottom: 0.31rem;
+  }
+}
+
+.footer__button {
+  display: none;
+
+  @include vp-769 {
+    display: block;
+    position: absolute;
+    width: calc(100% + 3rem);
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    top: 0;
+    left: -1.5rem;
+    right: 0;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.94rem;
+      height: 0.06rem;
+      background-color: #c4c4c4;
+      top: 25px;
+      right: 25px;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: $color-link-active;
+    }
+  }
+}
